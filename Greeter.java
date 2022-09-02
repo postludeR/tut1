@@ -13,7 +13,7 @@ public class Greeter {
 
   public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
-    return messages.getString("greeting") + ", " + name;
+    return messages.getString("greeting") + ", " + name.toUpperCase();
   }
 
   public static void main(String[] args) {
@@ -22,5 +22,7 @@ public class Greeter {
     String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
     System.out.println(greeter.sayHello());
+        System.out.println(“ＨＥＬＬＯ　ＷＯＲＬＤ！);
+
   }
 }
